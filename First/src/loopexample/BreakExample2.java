@@ -7,7 +7,7 @@ public class BreakExample2{
 		int num=0;
 		for(;;num++) {
 			sum+=num;
-			if(sum>100)
+			if(sum>1000)
 				break;
 		}
 		System.out.println("num: "+num);
