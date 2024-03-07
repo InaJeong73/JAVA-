@@ -23,6 +23,7 @@ public class CompleteCalc extends Calculator{
 		return num*num;
 	}
 
+
 	
 	
 }
