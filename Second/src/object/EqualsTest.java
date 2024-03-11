@@ -1,6 +1,6 @@
 package object;
 
-class Student{
+ class Student{
 	int studentId;
 	String studentName;
 	
@@ -11,7 +11,7 @@ class Student{
 
 	@Override
 	public String toString() {
-		return studentId+","+studentName;
+		return studentName+"학생의 학번은 "+studentId+"번 입니다.";
 	}
 
 	@Override
@@ -24,6 +24,13 @@ class Student{
 		}
 		return false;
 	}
+
+	@Override
+	public int hashCode() {
+	return studentId;
+	}
+	
+	
 	
 	
 }
@@ -52,5 +59,12 @@ public class EqualsTest {
 			System.out.println("studentLee와 studentSang는 동일합니다.");
 		else
 			System.out.println("studentLee와 studentSang는 동일하지 않습니다.");
+	
+		System.out.println("studentLee의 hashcode :"+studentLee.hashCode());
+		System.out.println("studentSang의 hashcode :"+studentSang.hashCode());
+		
+		System.out.println("studentLee의 실제주소값 :"+System.identityHashCode(studentLee));
+		System.out.println("studentSang의 실제주소값 :"+System.identityHashCode(studentSang));
+	
 	}
 }
