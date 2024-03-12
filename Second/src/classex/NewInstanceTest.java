@@ -1,8 +1,10 @@
 package classex;
 
+import java.io.IOException;
+
 public class NewInstanceTest {
 
-	public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException, ClassNotFoundException, IOException {
 		//생성자로 생성하기
 		Person person1=new Person();
 		System.out.println(person1);
@@ -11,6 +13,7 @@ public class NewInstanceTest {
 		Class pClass=Class.forName("classex.Person");
 		Person person2=(Person)pClass.newInstance();//Object 반환하므로 다운캐스팅 진행
 		System.out.println(person2);
+		int read=System.in.read();
 	}
 
 }
